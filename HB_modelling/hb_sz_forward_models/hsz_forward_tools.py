@@ -25,8 +25,6 @@ def map_slip_dist(slip_dist_poly: Polygon, fault_mesh: meshio.Mesh, max_slip: fl
     buffered_poly = slip_dist_poly.buffer(buffer_dist_km * 1000.)
     slip_dist_poly_outline = LineString(slip_dist_poly.exterior.coords)
 
-
-
     # Get triangle centres
     mesh_tris = fault_mesh.cells_dict["triangle"].byteswap().newbyteorder()
     mesh_points = fault_mesh.points.byteswap().newbyteorder()
@@ -37,7 +35,6 @@ def map_slip_dist(slip_dist_poly: Polygon, fault_mesh: meshio.Mesh, max_slip: fl
                                    geometry=[Point(x, y, z) for (x, y, z) in tri_centres], crs=2193)
     triangles_gdf = gpd.GeoDataFrame({"rake": tri_rakes, "slip": np.zeros(tri_rakes.shape)},
                                      geometry=[Polygon(tri) for tri in mesh_points[mesh_tris]], crs=2193)
-
 
     # Get points within buffer
     points_within_buffer = centres_gdf[centres_gdf.within(buffered_poly)]

@@ -2,7 +2,7 @@
 Scripts for inverting for maximum subsidence at Ahuriri Lagoon.
 
 ## Scripts
-Scripts are all in the `HB_modeling` directory. Thre are three types of models: upper plate inversion, upper plate 
+Scripts are all in the `HB_modelling` directory. Thre are three types of models: upper plate inversion, upper plate 
 forward, and subduction zone forward.
 
 # Upper plate inversion (/hb_upf_inversion)
@@ -28,10 +28,10 @@ There is one main script to run:
 
 # Subduction zone forward modeling (/hb_sz_forward_models)
 There is one main script to run:
-1.`hsz_run_forward_model.py` Calculates surface displacements and writes to a figure file. Pickle file with slip 
+1. `hsz_run_forward_model.py` Calculates surface displacements and writes to a figure file. Pickle file with slip 
    data on each tiled fault, slip triangle geojson, and results text file is also saved to a results folder. Slip 
    patches are defined by a geojson polygon file. Can define slip taper amount from the edge of the slip patch. 
 
-need mesh and rake data from vtk file (e.g., Williams et al., 2013)
+need mesh and rake data from vtk file (e.g., Williams et al., 2013) to run this script.
 `hsz_forward_tools.py` Additional functions used in the main script.
 `hsz_make_figures.py` Additional functions used to make figures in the main script.
