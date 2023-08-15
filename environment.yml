@@ -1,0 +1,23 @@
+name: hb-dislocations
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pyproj
+  - numpy
+  - numba
+  - pygmo
+  - geopandas
+  - notebook
+  - matplotlib
+  - netcdf4
+  - ipython
+  - scipy
+  - rasterio
+  - pip
+  - git
+  - cutde
+  - pip:
+    - dislocation_models
+    - git+https://github.com/uc-eqgeo/okada4py.git
+    - meshio

@@ -13,7 +13,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 from shapely.geometry import LineString, Point
 from scipy.interpolate import griddata
 from matplotlib.colors import ListedColormap
-from upf_forward_tools_jde import get_rect_Mw
+from upf_forward_tools import get_rect_Mw
 
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
