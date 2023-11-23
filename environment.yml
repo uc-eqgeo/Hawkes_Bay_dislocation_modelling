@@ -18,6 +18,6 @@ dependencies:
   - git
   - cutde
   - pip:
-    - dislocation_models
+    - ./dislocation_models
     - git+https://github.com/uc-eqgeo/okada4py.git
     - meshio
